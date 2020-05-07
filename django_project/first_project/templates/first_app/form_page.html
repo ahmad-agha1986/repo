@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Forms</title>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  </head>
+  <body>
+    <a href = '{% url "first_app:users" %}'> go to users page</a>
+     <a href = '{% url "admin:index" %}'> go to admin </a>
+     <a href = '{% url "first_app:index" %}'> go to index </a>
+    <h1> fill out the form </h1>
+
+    <div class = "container">
+
+    <form method ="POST">
+
+        {{form.as_p}}
+
+        {%csrf_token%}
+        
+
+    <input type="submit" class="btn btn-primary"  value="submit" >
+
+    </form>
+
+    </div>
+    </body>
+    </html>
+
+  
