@@ -48,8 +48,8 @@ def users(request):
 
 		if form.is_valid():
 			form.save()
-			# return index(request)
-			return redirect('first_app:index')
+			return index(request)
+			# return redirect('first_app:index')
 		else:
 			print('Error form invalid')
 
